@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World Page</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        #image-container {
+            text-align: center;
+        }
+
+        #helloText {
+            display: none;
+            font-size: 48px;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="image-container">
+        <img src= "click_me.png"Click me!"
+            id="clickableImage">
+        <div id="helloText">Hello, World!</div>
+    </div>
+
+    <script>
+        document.getElementById('clickableImage').addEventListener('click', function () {
+            this.style.display = 'none'; // Hide the image
+            document.getElementById('helloText').style.display = 'block'; // Show the text
+        });
+    </script>
+
+</body>
+
+</html>
